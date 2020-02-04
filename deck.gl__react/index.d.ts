@@ -1,40 +1,17 @@
-//typings for @deck.gl/react v7.3.3
+//typings for @deck.gl/react v8.0.12
 declare module '@deck.gl/react/utils/inherits-from' {
 	export function inheritsFrom(Type: any, ParentType: any): boolean;
 
 }
-declare module '@deck.gl/react/deckgl' {
-	import { DeckProps } from '@deck.gl/core/lib/deck';
-	import * as React from 'react';
-	export default class DeckGL extends React.Component<DeckProps, {}> {
-		constructor(props: DeckProps);
-		componentDidMount(): void;
-		shouldComponentUpdate(nextProps: any): boolean;
-		componentDidUpdate(): void;
-		componentWillUnmount(): void;
-		pickObject(opts: any): any;
-		pickMultipleObjects(opts: any): any;
-		pickObjects(opts: any): any;
-		_redrawDeck(): void;
-		_customRender(redrawReason: any): void;
-		_parseJSX(props: any): any;
-		_updateFromProps(props: any): void;
-		render(): import("react").DetailedReactHTMLElement<{
-			id: string;
-		}, HTMLElement>;
-	}
-
-}
-
 declare module '@deck.gl/react/utils/extract-jsx-layers' {
 	export default function extractJSXLayers({ children, layers, views }: {
-		children: any;
-		layers: any;
-		views: any;
+	    children: any;
+	    layers: any;
+	    views: any;
 	}): {
-		layers: any;
-		children: any[];
-		views: any;
+	    layers: any;
+	    children: any[];
+	    views: any;
 	};
 
 }
@@ -44,11 +21,58 @@ declare module '@deck.gl/react/utils/evaluate-children' {
 }
 declare module '@deck.gl/react/utils/position-children-under-views' {
 	export default function positionChildrenUnderViews({ children, viewports, deck, ContextProvider }: {
-		children: any;
-		viewports: any;
-		deck: any;
-		ContextProvider: any;
-	}): any;
+	    children: any;
+	    viewports: any;
+	    deck: any;
+	    ContextProvider: any;
+	}): (import("react").ReactElement<{
+	    key: string;
+	    id: string;
+	    style: {
+	        position: string;
+	        left: any;
+	        top: any;
+	        width: any;
+	        height: any;
+	    };
+	}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)> | import("react").CElement<{
+	    value: {
+	        viewport: any;
+	        container: any;
+	        eventManager: any;
+	        onViewStateChange: (params: any) => void;
+	    };
+	}, import("react").Component<{
+	    value: {
+	        viewport: any;
+	        container: any;
+	        eventManager: any;
+	        onViewStateChange: (params: any) => void;
+	    };
+	}, any, any>>)[];
+
+}
+declare module '@deck.gl/react/deckgl' {
+	import React from '@deck.gl/react/react';
+	export default class DeckGL extends React.Component {
+	    constructor(props: any);
+	    componentDidMount(): void;
+	    shouldComponentUpdate(nextProps: any): boolean;
+	    componentDidUpdate(): void;
+	    componentWillUnmount(): void;
+	    pickObject(opts: any): any;
+	    pickMultipleObjects(opts: any): any;
+	    pickObjects(opts: any): any;
+	    _redrawDeck(): void;
+	    _customRender(redrawReason: any): void;
+	    _parseJSX(props: any): any;
+	    _updateFromProps(props: any): void;
+	    render(): import("react").ReactElement<{
+	        id: string;
+	        ref: any;
+	        style: any;
+	    }, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+	}
 
 }
 declare module '@deck.gl/react' {
