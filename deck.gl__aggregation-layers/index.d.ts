@@ -4,7 +4,7 @@ declare module '@deck.gl/aggregation-layers/utils/prop-utils' {
 
 }
 declare module '@deck.gl/aggregation-layers/aggregation-layer' {
-	import { CompositeLayer } from '@deck.gl/aggregation-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class AggregationLayer extends CompositeLayer {
 	    initializeState(dimensions: any): void;
 	    updateState(opts: any): void;
@@ -20,7 +20,7 @@ declare module '@deck.gl/aggregation-layers/aggregation-layer' {
 	     * @param {Boolean} params.compareAll - when `true` it will include non layer props for comparision
 	     * @returns {Boolean} - returns true if dimensions' prop or accessor is changed
 	     **/
-	    isAggregationDirty(updateOpts: any, params?: {}): any;
+	    isAggregationDirty(updateOpts: any, params?: {}): string | boolean;
 	    /**
 	     * Checks if an attribute is changed
 	     * @param {String} name - name of the attribute
@@ -311,7 +311,7 @@ declare module '@deck.gl/aggregation-layers/screen-grid-layer/screen-grid-layer-
 
 }
 declare module '@deck.gl/aggregation-layers/screen-grid-layer/screen-grid-cell-layer' {
-	import { Layer } from '@deck.gl/aggregation-layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class ScreenGridCellLayer extends Layer {
 	    static isSupported(gl: any): any;
 	    getShaders(): {
@@ -659,7 +659,7 @@ declare module '@deck.gl/aggregation-layers/gpu-grid-layer/gpu-grid-cell-layer-f
 
 }
 declare module '@deck.gl/aggregation-layers/gpu-grid-layer/gpu-grid-cell-layer' {
-	import { Layer } from '@deck.gl/aggregation-layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class GPUGridCellLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -693,7 +693,7 @@ declare module '@deck.gl/aggregation-layers/gpu-grid-layer/gpu-grid-layer' {
 
 }
 declare module '@deck.gl/aggregation-layers/grid-layer/grid-layer' {
-	import { CompositeLayer } from '@deck.gl/aggregation-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class GridLayer extends CompositeLayer {
 	    initializeState(): void;
 	    updateState({ oldProps, props, changeFlags }: {
@@ -732,7 +732,7 @@ declare module '@deck.gl/aggregation-layers/heatmap-layer/triangle-layer-fragmen
 
 }
 declare module '@deck.gl/aggregation-layers/heatmap-layer/triangle-layer' {
-	import { Layer } from '@deck.gl/aggregation-layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class TriangleLayer extends Layer {
 	    getShaders(): {
 	        vs: string;

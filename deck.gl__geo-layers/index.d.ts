@@ -5,7 +5,7 @@ declare module '@deck.gl/geo-layers/great-circle-layer/great-circle-vertex.glsl'
 
 }
 declare module '@deck.gl/geo-layers/great-circle-layer/great-circle-layer' {
-	import { ArcLayer } from '@deck.gl/geo-layers/@deck.gl/layers';
+	import { ArcLayer } from '@deck.gl/layers';
 	export default class GreatCircleLayer extends ArcLayer {
 	    getShaders(): any;
 	}
@@ -24,7 +24,7 @@ declare module '@deck.gl/geo-layers/s2-layer/s2-utils' {
 
 }
 declare module '@deck.gl/geo-layers/s2-layer/s2-layer' {
-	import { CompositeLayer } from '@deck.gl/geo-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class S2Layer extends CompositeLayer {
 	    renderLayers(): any;
 	}
@@ -103,7 +103,7 @@ declare module '@deck.gl/geo-layers/tile-layer/utils/tile-cache' {
 
 }
 declare module '@deck.gl/geo-layers/tile-layer/tile-layer' {
-	import { CompositeLayer } from '@deck.gl/geo-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class TileLayer extends CompositeLayer {
 	    initializeState(): void;
 	    shouldUpdateState({ changeFlags }: {
@@ -127,7 +127,7 @@ declare module '@deck.gl/geo-layers/tile-layer/tile-layer' {
 
 }
 declare module '@deck.gl/geo-layers/trips-layer/trips-layer' {
-	import { PathLayer } from '@deck.gl/geo-layers/@deck.gl/layers';
+	import { PathLayer } from '@deck.gl/layers';
 	export default class TripsLayer extends PathLayer {
 	    getShaders(): any;
 	    initializeState(params: any): void;
@@ -136,7 +136,7 @@ declare module '@deck.gl/geo-layers/trips-layer/trips-layer' {
 
 }
 declare module '@deck.gl/geo-layers/h3-layers/h3-cluster-layer' {
-	import { CompositeLayer } from '@deck.gl/geo-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class H3ClusterLayer extends CompositeLayer {
 	    updateState({ props, oldProps, changeFlags }: {
 	        props: any;
@@ -148,7 +148,7 @@ declare module '@deck.gl/geo-layers/h3-layers/h3-cluster-layer' {
 
 }
 declare module '@deck.gl/geo-layers/h3-layers/h3-hexagon-layer' {
-	import { CompositeLayer } from '@deck.gl/geo-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export function normalizeLongitudes(vertices: any, refLng: any): void;
 	export function scalePolygon(hexId: any, vertices: any, factor: any): void;
 	/**
@@ -203,7 +203,7 @@ declare module '@deck.gl/geo-layers/h3-layers/h3-hexagon-layer' {
 
 }
 declare module '@deck.gl/geo-layers/tile-3d-layer/tile-3d-layer' {
-	import { CompositeLayer } from '@deck.gl/geo-layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class Tile3DLayer extends CompositeLayer {
 	    initializeState(): void;
 	    shouldUpdateState({ changeFlags }: {

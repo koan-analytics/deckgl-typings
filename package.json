@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node ./scripts/convert.js",
     "test": "tsc -p ./test",
-    "postinstall": "npx indefinitely-typed --folder deck.gl__aggregation-layers --folder deck.gl__core --folder deck.gl__layers --folder deck.gl__google-maps --folder deck.gl__json --folder deck.gl__mapbox --folder deck.gl__mesh-layers --folder deck.gl__geo-layers --folder deck.gl__extensions --folder deck.gl__react --folder deck.gl --folder luma.gl__webgl-state-tracker --folder luma.gl__webgl --folder luma.gl__shadertools --folder luma.gl__core --folder math.gl"
+    "postinstall": "node node_modules/indefinitely-typed/dist/index.js --folder deck.gl__aggregation-layers --folder deck.gl__core --folder deck.gl__extensions --folder deck.gl__geo-layers --folder deck.gl__google-maps --folder deck.gl__json --folder deck.gl__layers --folder deck.gl__mapbox --folder deck.gl__mesh-layers --folder deck.gl__react --folder deck.gl --folder luma.gl__constants --folder luma.gl__core --folder luma.gl__debug --folder luma.gl__engine --folder luma.gl__experimental --folder luma.gl__glfx --folder luma.gl__gltools --folder luma.gl__shadertools --folder luma.gl__webgl --folder luma.gl__webgl-state-tracker --folder luma.gl --folder math.gl"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,14 @@
   },
   "homepage": "https://github.com/danmarshall/deckgl-typings#readme",
   "devDependencies": {
+    "@luma.gl/constants": "^8.0.3",
     "@luma.gl/core": "^8.0.3",
+    "@luma.gl/debug": "^8.0.3",
+    "@luma.gl/effects": "^7.3.2",
+    "@luma.gl/engine": "^8.0.3",
+    "@luma.gl/experimental": "^8.0.3",
+    "@luma.gl/glfx": "^7.3.2",
+    "@luma.gl/gltools": "^8.0.3",
     "@luma.gl/shadertools": "^8.0.3",
     "@luma.gl/webgl": "^8.0.3",
     "@luma.gl/webgl-state-tracker": "^7.3.2",
@@ -36,6 +43,8 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@types/hammerjs": "^2.0.36"
+    "@types/hammerjs": "^2.0.36",
+    "indefinitely-typed": "^1.0.2",
+    "luma.gl": "^7.3.2"
   }
 }

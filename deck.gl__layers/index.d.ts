@@ -10,7 +10,7 @@ declare module '@deck.gl/layers/arc-layer/arc-layer-fragment.glsl' {
 
 }
 declare module '@deck.gl/layers/arc-layer/arc-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class ArcLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -37,7 +37,7 @@ declare module '@deck.gl/layers/bitmap-layer/bitmap-layer-fragment' {
 
 }
 declare module '@deck.gl/layers/bitmap-layer/bitmap-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class BitmapLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -115,7 +115,7 @@ declare module '@deck.gl/layers/icon-layer/icon-manager' {
 
 }
 declare module '@deck.gl/layers/icon-layer/icon-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class IconLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -147,7 +147,7 @@ declare module '@deck.gl/layers/line-layer/line-layer-fragment.glsl' {
 
 }
 declare module '@deck.gl/layers/line-layer/line-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class LineLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -174,7 +174,7 @@ declare module '@deck.gl/layers/point-cloud-layer/point-cloud-layer-fragment.gls
 
 }
 declare module '@deck.gl/layers/point-cloud-layer/point-cloud-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class PointCloudLayer extends Layer {
 	    getShaders(id: any): any;
 	    initializeState(): void;
@@ -201,7 +201,7 @@ declare module '@deck.gl/layers/scatterplot-layer/scatterplot-layer-fragment.gls
 
 }
 declare module '@deck.gl/layers/scatterplot-layer/scatterplot-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class ScatterplotLayer extends Layer {
 	    getShaders(id: any): any;
 	    initializeState(): void;
@@ -235,7 +235,7 @@ declare module '@deck.gl/layers/column-layer/column-layer-fragment.glsl' {
 
 }
 declare module '@deck.gl/layers/column-layer/column-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	import ColumnGeometry from '@deck.gl/layers/column-layer/column-geometry';
 	export default class ColumnLayer extends Layer {
 	    getShaders(): any;
@@ -272,7 +272,7 @@ declare module '@deck.gl/layers/column-layer/grid-cell-layer' {
 
 }
 declare module '@deck.gl/layers/path-layer/path-tesselator' {
-	import { Tesselator } from '@deck.gl/layers/@deck.gl/core';
+	import { Tesselator } from '@deck.gl/core';
 	export default class PathTesselator extends Tesselator {
 	    constructor(opts: any);
 	    getGeometryFromBuffer(buffer: any): any;
@@ -298,7 +298,7 @@ declare module '@deck.gl/layers/path-layer/path-layer-fragment.glsl' {
 
 }
 declare module '@deck.gl/layers/path-layer/path-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class PathLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -340,7 +340,7 @@ declare module '@deck.gl/layers/solid-polygon-layer/polygon' {
 
 }
 declare module '@deck.gl/layers/solid-polygon-layer/polygon-tesselator' {
-	import { Tesselator } from '@deck.gl/layers/@deck.gl/core';
+	import { Tesselator } from '@deck.gl/core';
 	export default class PolygonTesselator extends Tesselator {
 	    constructor(opts: any);
 	    get(attributeName: any): any;
@@ -385,7 +385,7 @@ declare module '@deck.gl/layers/solid-polygon-layer/solid-polygon-layer-fragment
 
 }
 declare module '@deck.gl/layers/solid-polygon-layer/solid-polygon-layer' {
-	import { Layer } from '@deck.gl/layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class SolidPolygonLayer extends Layer {
 	    getShaders(vs: any): any;
 	    initializeState(): void;
@@ -422,7 +422,7 @@ declare module '@deck.gl/layers/utils' {
 
 }
 declare module '@deck.gl/layers/polygon-layer/polygon-layer' {
-	import { CompositeLayer } from '@deck.gl/layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class PolygonLayer extends CompositeLayer {
 	    initializeState(): void;
 	    updateState({ oldProps, props, changeFlags }: {
@@ -459,7 +459,7 @@ declare module '@deck.gl/layers/geojson-layer/geojson' {
 
 }
 declare module '@deck.gl/layers/geojson-layer/geojson-layer' {
-	import { CompositeLayer } from '@deck.gl/layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class GeoJsonLayer extends CompositeLayer {
 	    initializeState(): void;
 	    updateState({ props, changeFlags }: {
@@ -616,7 +616,7 @@ declare module '@deck.gl/layers/text-layer/font-atlas-manager' {
 
 }
 declare module '@deck.gl/layers/text-layer/text-layer' {
-	import { CompositeLayer } from '@deck.gl/layers/@deck.gl/core';
+	import { CompositeLayer } from '@deck.gl/core';
 	export default class TextLayer extends CompositeLayer {
 	    initializeState(): void;
 	    updateState({ props, oldProps, changeFlags }: {

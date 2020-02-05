@@ -25,7 +25,7 @@ declare module '@deck.gl/extensions/brushing/shader-module' {
 
 }
 declare module '@deck.gl/extensions/brushing/brushing' {
-	import { LayerExtension } from '@deck.gl/extensions/@deck.gl/core';
+	import { LayerExtension } from '@deck.gl/core';
 	export default class BrushingExtension extends LayerExtension {
 	    getShaders(extension: any): {
 	        modules: {
@@ -72,7 +72,7 @@ declare module '@deck.gl/extensions/data-filter/shader-module' {
 
 }
 declare module '@deck.gl/extensions/data-filter/data-filter' {
-	import { LayerExtension } from '@deck.gl/extensions/@deck.gl/core';
+	import { LayerExtension } from '@deck.gl/core';
 	export default class DataFilterExtension extends LayerExtension {
 	    constructor({ filterSize }?: {
 	        filterSize?: number;
@@ -113,7 +113,7 @@ declare module '@deck.gl/extensions/fp64/project64' {
 
 }
 declare module '@deck.gl/extensions/fp64/fp64' {
-	import { LayerExtension } from '@deck.gl/extensions/@deck.gl/core';
+	import { LayerExtension } from '@deck.gl/core';
 	export default class Fp64Extension extends LayerExtension {
 	    getShaders(opts: any): {
 	        modules: {
@@ -138,7 +138,7 @@ declare module '@deck.gl/extensions/path-style/shaders.glsl' {
 
 }
 declare module '@deck.gl/extensions/path-style/path-style' {
-	import { LayerExtension } from '@deck.gl/extensions/@deck.gl/core';
+	import { LayerExtension } from '@deck.gl/core';
 	export default class PathStyleExtension extends LayerExtension {
 	    constructor({ dash }?: {
 	        dash?: boolean;

@@ -50,7 +50,7 @@ declare module '@deck.gl/mesh-layers/simple-mesh-layer/simple-mesh-layer-fragmen
 
 }
 declare module '@deck.gl/mesh-layers/simple-mesh-layer/simple-mesh-layer' {
-	import { Layer } from '@deck.gl/mesh-layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class SimpleMeshLayer extends Layer {
 	    getShaders(): any;
 	    initializeState(): void;
@@ -83,7 +83,7 @@ declare module '@deck.gl/mesh-layers/scenegraph-layer/scenegraph-layer-fragment.
 
 }
 declare module '@deck.gl/mesh-layers/scenegraph-layer/scenegraph-layer' {
-	import { Layer } from '@deck.gl/mesh-layers/@deck.gl/core';
+	import { Layer } from '@deck.gl/core';
 	export default class ScenegraphLayer extends Layer {
 	    initializeState(): void;
 	    updateState(params: any): void;
